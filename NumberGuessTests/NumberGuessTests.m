@@ -16,8 +16,8 @@
 - (void)setUp
 {
     [super setUp];
-    targetNumber = @[@"1", @"2", @"3", @"4"];
-    numberGuess = [[TWNumberGuess alloc] initWithTarget:targetNumber];
+    TWFixNumberGenerator* fixNumberGenerator = [[TWFixNumberGenerator alloc] init];
+    numberGuess = [[TWNumberGuess alloc] initWithGenerator:fixNumberGenerator];
 }
 
 - (void) testShouldReturn4A0BWhenALlCorrect{
@@ -39,6 +39,14 @@
     
     NSString *result=[numberGuess compareTargetNumbersWithGuessNumber:guessNumber];
     STAssertEqualObjects(result, @"0A0B", nil);
+}
+
+
+- (void) testShouldA{
+    TWRandomNumberGenerator *generator= [[TWRandomNumberGenerator alloc]init];
+    [generator shaffle:3];
+    STAssertEqualObjects(@1, @1, nil);
+    
 }
 
 @end

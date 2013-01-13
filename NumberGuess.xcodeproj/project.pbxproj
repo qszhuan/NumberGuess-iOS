@@ -22,6 +22,7 @@
 		BB1DC4B9169FC94D00EDA7FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB1DC4B7169FC94D00EDA7FE /* InfoPlist.strings */; };
 		BB1DC4BC169FC94D00EDA7FE /* NumberGuessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4BB169FC94D00EDA7FE /* NumberGuessTests.m */; };
 		BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */; };
+		BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		BB1DC4BB169FC94D00EDA7FE /* NumberGuessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberGuessTests.m; sourceTree = "<group>"; };
 		BB1DC4C9169FCEBA00EDA7FE /* TWNumberGuess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWNumberGuess.h; sourceTree = "<group>"; };
 		BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWNumberGuess.m; sourceTree = "<group>"; };
+		BBF7E50316A2EC3F0063E6A2 /* TWNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWNumberGenerator.h; sourceTree = "<group>"; };
+		BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWNumberGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				BB1DC4A0169FC94D00EDA7FE /* TWAppDelegate.m */,
 				BB1DC497169FC94D00EDA7FE /* Supporting Files */,
 				BB1DC4C9169FCEBA00EDA7FE /* TWNumberGuess.h */,
+				BBF7E50316A2EC3F0063E6A2 /* TWNumberGenerator.h */,
+				BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */,
 				BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */,
 			);
 			path = NumberGuess;
@@ -270,6 +275,7 @@
 				BB1DC49D169FC94D00EDA7FE /* main.m in Sources */,
 				BB1DC4A1169FC94D00EDA7FE /* TWAppDelegate.m in Sources */,
 				BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */,
+				BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

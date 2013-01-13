@@ -4,16 +4,16 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "NumberGuess/TWNumberGuess.m"
-         timestampString = "379574449.527006"
+         filePath = "NumberGuess/TWNumberGenerator.m"
+         timestampString = "379784907.18548"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
-         landmarkName = "-compareTargetNumberswithGuessNumber:"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
+         landmarkName = "-shaffle:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

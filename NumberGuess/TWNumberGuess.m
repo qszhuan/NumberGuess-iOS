@@ -15,24 +15,26 @@
     if (self) {
         targetArray = target;
     }
+   
+    return self;
+}
+
+- (id)initWithGenerator:(TWNumberGenerator *)generator{
+    self = [super init];
+    if(self) {
+        targetArray = (NSArray*)[generator generate];
+    }
     return self;
 }
 
 - (NSString *)compareTargetNumbersWithGuessNumber:(NSArray *)guess{
-    int a = 0;
-    int b = 0;
+    int numberOfA = 0;
+    int numberOfB = 0;
     for (int i=0; i < targetArray.count; i++) {
-        if (targetArray[i] == guess[i]) {
-            a++;
-        }else {
-            for (int j=0; j<targetArray.count; j++) {
-                if(targetArray[j] == guess[i]){
-                    b++;
-                }
-            }
-        }
+        ([targetArray[i] isEqualToString: guess[i]] && ++numberOfA) ||
+        ([targetArray containsObject:guess[i]] && ++numberOfB);
     }
-    return [NSString stringWithFormat:@"%dA%dB", a, b];
+    return [NSString stringWithFormat:@"%dA%dB", numberOfA, numberOfB];
 }
 
 @end
