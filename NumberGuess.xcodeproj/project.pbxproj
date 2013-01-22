@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AC7005A6111349A25B1BB96 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7027345C5DD2C9B0DC7CB /* StringUtils.m */; };
+		6AC703A86D4E6F92CE097DF4 /* StringUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */; };
 		6AC70BB4A677EFACB0CF0212 /* TWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */; };
 		6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC704637DBECBA9D368E9AA /* TWViewController.m */; };
 		BB1DC491169FC94D00EDA7FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC490169FC94D00EDA7FE /* UIKit.framework */; };
@@ -23,8 +25,8 @@
 		BB1DC4B1169FC94D00EDA7FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC492169FC94D00EDA7FE /* Foundation.framework */; };
 		BB1DC4B9169FC94D00EDA7FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB1DC4B7169FC94D00EDA7FE /* InfoPlist.strings */; };
 		BB1DC4BC169FC94D00EDA7FE /* NumberGuessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4BB169FC94D00EDA7FE /* NumberGuessTests.m */; };
-		BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */; };
-		BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */; };
+		BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6AC70130BE62F38C016498D7 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		6AC7027345C5DD2C9B0DC7CB /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
 		6AC704637DBECBA9D368E9AA /* TWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWViewController.m; sourceTree = "<group>"; };
+		6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtilsTest.m; sourceTree = "<group>"; };
+		6AC7084EA541009E2223D5A6 /* StringUtilsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtilsTest.h; sourceTree = "<group>"; };
 		6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWViewController.xib; sourceTree = "<group>"; };
 		6AC70F83C938452B70EDB953 /* TWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWViewController.h; sourceTree = "<group>"; };
 		BB1DC48C169FC94D00EDA7FE /* NumberGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +139,8 @@
 				BBF7E50316A2EC3F0063E6A2 /* TWNumberGenerator.h */,
 				BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */,
 				BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */,
+				6AC7027345C5DD2C9B0DC7CB /* StringUtils.m */,
+				6AC70130BE62F38C016498D7 /* StringUtils.h */,
 			);
 			path = NumberGuess;
 			sourceTree = "<group>";
@@ -157,6 +165,8 @@
 				BB1DC4BA169FC94D00EDA7FE /* NumberGuessTests.h */,
 				BB1DC4BB169FC94D00EDA7FE /* NumberGuessTests.m */,
 				BB1DC4B5169FC94D00EDA7FE /* Supporting Files */,
+				6AC7084EA541009E2223D5A6 /* StringUtilsTest.h */,
+				6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */,
 			);
 			path = NumberGuessTests;
 			sourceTree = "<group>";
@@ -286,6 +296,7 @@
 				BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */,
 				BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */,
 				6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */,
+				6AC7005A6111349A25B1BB96 /* StringUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB1DC4BC169FC94D00EDA7FE /* NumberGuessTests.m in Sources */,
+				6AC703A86D4E6F92CE097DF4 /* StringUtilsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

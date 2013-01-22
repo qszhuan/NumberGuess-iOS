@@ -23,7 +23,7 @@ int UPPER_BOUND = 9;
 @implementation TWFixNumberGenerator
 
 - (NSArray*)generate{
-    return @[@"1", @"2", @"3", @"4"];
+    return [@[@"1", @"2", @"3", @"4"] autorelease];
 }
 
 @end
@@ -41,7 +41,7 @@ int UPPER_BOUND = 9;
 }
 
 - (NSArray*) generate{
-    NSMutableArray * seeds = [[NSMutableArray alloc] initWithCapacity:100];
+    NSMutableArray * seeds = [[[NSMutableArray alloc] initWithCapacity:100] autorelease];
 
     for (int i = 0; i < 100; i++) {
         int a = arc4random_uniform(UPPER_BOUND);

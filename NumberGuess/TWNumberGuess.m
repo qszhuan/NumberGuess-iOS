@@ -14,7 +14,7 @@
 
 - (id)initWithGenerator:(TWNumberGenerator *)generator{
     self = [super init];
-    numberGenerator = generator;
+    numberGenerator = [generator retain];
     if(self) {
         [self reset];
     }
@@ -25,12 +25,13 @@
     if(failedCount == 6){
         return FAILED;
     }
+    NSArray * guessNumbers = [[guess copy] autorelease];
 
     int numberOfA = 0;
     int numberOfB = 0;
     for (int i=0; i < targetArray.count; i++) {
-        ([targetArray[i] isEqualToString: guess[i]] && ++numberOfA) ||
-        ([targetArray containsObject:guess[i]] && ++numberOfB);
+        ([targetArray[i] isEqualToString: guessNumbers[i]] && ++numberOfA) ||
+        ([targetArray containsObject:guessNumbers[i]] && ++numberOfB);
     }
     if (numberOfA != 4) {
         if (++failedCount == 6){
@@ -43,6 +44,17 @@
 
 - (void)reset {
     failedCount = 0;
-    targetArray = [numberGenerator generate];
+    if (targetArray != nil){
+        [targetArray release];
+        targetArray = nil;
+    }
+    targetArray = [[numberGenerator generate] retain];
 }
+
+- (void)dealloc {
+    [numberGenerator release];
+    numberGenerator = nil;
+    [super dealloc];
+}
+
 @end

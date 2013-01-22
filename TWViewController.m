@@ -8,12 +8,13 @@
 
 #import "TWViewController.h"
 #import "TWNumberGuess.h"
+#import "StringUtils.h"
 
 @interface TWViewController ()
 
 @end
 
-const NSString *TRY_AGAIN = @"Try Again";
+NSString *TRY_AGAIN = @"Try Again";
 
 @implementation TWViewController{
     TWNumberGuess *guesser;
@@ -37,6 +38,7 @@ const NSString *TRY_AGAIN = @"Try Again";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self disableGuessButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,8 +72,9 @@ const NSString *TRY_AGAIN = @"Try Again";
 
 - (void)tryAgain {
     self.result.text = @"Result";
-    self.input.text = @"";
+    [self.input setText:@""];
     [self.btnText setTitle:@"Guess" forState:UIControlStateNormal];
+    [self disableGuessButton];
     [guesser reset];
     return;
 }
@@ -79,5 +82,25 @@ const NSString *TRY_AGAIN = @"Try Again";
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+}
+- (IBAction)inputChanged:(id)sender {
+    NSString *inputString = self.input.text;
+    BOOL isNumericString = [StringUtils isNumericString:inputString];
+    BOOL isStringWithoutRepetion = [StringUtils isStringWithoutRepetion:inputString];
+    if(inputString.length == 4 && isNumericString && isStringWithoutRepetion)  {
+        [self enableGuessButton];
+    } else{
+        [self disableGuessButton];
+    }
+}
+
+- (void)enableGuessButton {
+    self.btnText.enabled = YES;
+    [self.btnText setTitleColor:[self.btnText titleColorForState:UIControlStateNormal] forState:UIControlStateNormal];
+}
+
+- (void)disableGuessButton {
+    self.btnText.enabled = NO;
+    [self.btnText setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 }
 @end

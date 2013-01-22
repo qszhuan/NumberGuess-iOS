@@ -14,4 +14,5 @@
 @property (strong, nonatomic) IBOutlet UITextField *input;
 - (IBAction)guess:(id)sender;
 @property (retain) IBOutlet UIButton *btnText;
+- (IBAction)inputChanged:(id)sender;
 @end
