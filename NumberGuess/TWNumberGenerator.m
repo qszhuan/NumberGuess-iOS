@@ -40,16 +40,20 @@ int UPPER_BOUND = 9;
     return self;
 }
 
-- (NSArray*)generate{
-    return [self shaffle :100];
-}
+- (NSArray*) generate{
+    NSMutableArray * seeds = [[NSMutableArray alloc] initWithCapacity:100];
 
-- (NSArray*)shaffle :(int)times{
-    for (int i = 0; i < times; i++) {
+    for (int i = 0; i < 100; i++) {
         int a = arc4random_uniform(UPPER_BOUND);
         int b = arc4random_uniform(UPPER_BOUND);
-        
-        [numberList exchangeObjectAtIndex:a withObjectAtIndex:b];
+        [seeds insertObject:@[[NSNumber numberWithInt:a], [NSNumber numberWithInt:b]] atIndex:i];
+    }
+    return [self shuffleWithSeeds:seeds];
+}
+
+- (NSArray*)shuffleWithSeeds:(NSMutableArray*)seeds{
+    for (int i = 0; i < seeds.count; i++) {
+        [numberList exchangeObjectAtIndex:[seeds[i][0] unsignedIntegerValue] withObjectAtIndex:[seeds[i][1] unsignedIntegerValue]];
         for (id each  in numberList) {
             NSLog(@"%u %@", i, each);
         }

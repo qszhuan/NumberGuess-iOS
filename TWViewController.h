@@ -10,4 +10,8 @@
 
 @interface TWViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *result;
+@property (strong, nonatomic) IBOutlet UITextField *input;
+- (IBAction)guess:(id)sender;
+@property (retain) IBOutlet UIButton *btnText;
 @end

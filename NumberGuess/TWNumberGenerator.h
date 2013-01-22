@@ -20,5 +20,6 @@
 
 @interface TWRandomNumberGenerator : TWNumberGenerator
 - (id)init;
-- (NSArray*)shaffle:(int)times;
+
+- (NSArray*)shuffleWithSeeds:(NSMutableArray*)seeds;
 @end

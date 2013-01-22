@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AC70BB4A677EFACB0CF0212 /* TWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */; };
+		6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC704637DBECBA9D368E9AA /* TWViewController.m */; };
 		BB1DC491169FC94D00EDA7FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC490169FC94D00EDA7FE /* UIKit.framework */; };
 		BB1DC493169FC94D00EDA7FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC492169FC94D00EDA7FE /* Foundation.framework */; };
 		BB1DC495169FC94D00EDA7FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC494169FC94D00EDA7FE /* CoreGraphics.framework */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6AC704637DBECBA9D368E9AA /* TWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWViewController.m; sourceTree = "<group>"; };
+		6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWViewController.xib; sourceTree = "<group>"; };
+		6AC70F83C938452B70EDB953 /* TWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWViewController.h; sourceTree = "<group>"; };
 		BB1DC48C169FC94D00EDA7FE /* NumberGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1DC490169FC94D00EDA7FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BB1DC492169FC94D00EDA7FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +97,9 @@
 				BB1DC4B4169FC94D00EDA7FE /* NumberGuessTests */,
 				BB1DC48F169FC94D00EDA7FE /* Frameworks */,
 				BB1DC48D169FC94D00EDA7FE /* Products */,
+				6AC70F83C938452B70EDB953 /* TWViewController.h */,
+				6AC704637DBECBA9D368E9AA /* TWViewController.m */,
+				6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,6 +246,7 @@
 				BB1DC4A3169FC94D00EDA7FE /* Default.png in Resources */,
 				BB1DC4A5169FC94D00EDA7FE /* Default@2x.png in Resources */,
 				BB1DC4A7169FC94D00EDA7FE /* Default-568h@2x.png in Resources */,
+				6AC70BB4A677EFACB0CF0212 /* TWViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +285,7 @@
 				BB1DC4A1169FC94D00EDA7FE /* TWAppDelegate.m in Sources */,
 				BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */,
 				BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */,
+				6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
