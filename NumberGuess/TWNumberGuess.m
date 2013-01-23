@@ -25,7 +25,7 @@
     if(failedCount == 6){
         return FAILED;
     }
-    NSArray * guessNumbers = [[guess copy] autorelease];
+    NSArray * guessNumbers = [guess copy];
 
     int numberOfA = 0;
     int numberOfB = 0;
@@ -33,6 +33,7 @@
         ([targetArray[i] isEqualToString: guessNumbers[i]] && ++numberOfA) ||
         ([targetArray containsObject:guessNumbers[i]] && ++numberOfB);
     }
+    [guessNumbers autorelease];
     if (numberOfA != 4) {
         if (++failedCount == 6){
             return FAILED;

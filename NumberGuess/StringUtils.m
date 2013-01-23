@@ -12,10 +12,8 @@
 
 }
 
-+ (BOOL)isStringWithoutRepetion:(NSString *)string {
-    NSError* error = nil;
-
-    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"(\\w)\\w*\\1" options:0 error:&error];
++ (BOOL)isStringWithoutRepetition:(NSString *)string {
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"(\\w)\\w*\\1" options:0 error:nil];
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, [string length])];
     return numberOfMatches <= 0;
 }

@@ -23,7 +23,7 @@ int UPPER_BOUND = 9;
 @implementation TWFixNumberGenerator
 
 - (NSArray*)generate{
-    return [@[@"1", @"2", @"3", @"4"] autorelease];
+    return @[@"1", @"2", @"3", @"4"];
 }
 
 @end

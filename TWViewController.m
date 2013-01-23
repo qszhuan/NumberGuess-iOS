@@ -27,7 +27,8 @@ NSString *TRY_AGAIN = @"Try Again";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        TWNumberGenerator* generator = [[TWRandomNumberGenerator alloc]init];
+//        TWNumberGenerator* generator = [[TWRandomNumberGenerator alloc]init];
+        TWNumberGenerator* generator = [[TWFixNumberGenerator alloc]init];
         guesser = [[TWNumberGuess alloc]initWithGenerator:generator];
         failedCount = 0;
     }
@@ -48,7 +49,7 @@ NSString *TRY_AGAIN = @"Try Again";
 }
 
 - (IBAction)guess:(id)sender {
-    if (self.btnText.currentTitle == TRY_AGAIN){
+    if (self.btnGuess.currentTitle == TRY_AGAIN){
         [self tryAgain];
         return;
     }
@@ -65,29 +66,34 @@ NSString *TRY_AGAIN = @"Try Again";
 }
 
 - (void)updateStateWithResult:(NSString *)result {
-    if (result == FAILED || result == @"4A0B"){
-        [self.btnText setTitle:TRY_AGAIN forState:UIControlStateNormal];
+    BOOL failed = [result isEqualToString:FAILED];
+    BOOL success = [result isEqualToString:@"4A0B"];
+    if (failed || success){
+        [self.btnGuess setTitle:TRY_AGAIN forState:UIControlStateNormal];
     }
 }
 
 - (void)tryAgain {
     self.result.text = @"Result";
     [self.input setText:@""];
-    [self.btnText setTitle:@"Guess" forState:UIControlStateNormal];
+    [self.btnGuess setTitle:@"Guess" forState:UIControlStateNormal];
     [self disableGuessButton];
     [guesser reset];
     return;
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
+
 - (IBAction)inputChanged:(id)sender {
     NSString *inputString = self.input.text;
+
     BOOL isNumericString = [StringUtils isNumericString:inputString];
-    BOOL isStringWithoutRepetion = [StringUtils isStringWithoutRepetion:inputString];
-    if(inputString.length == 4 && isNumericString && isStringWithoutRepetion)  {
+    BOOL isStringWithoutRepetition = [StringUtils isStringWithoutRepetition:inputString];
+    BOOL isValid = inputString.length == 4 && isNumericString && isStringWithoutRepetition;
+
+    if(isValid) {
         [self enableGuessButton];
     } else{
         [self disableGuessButton];
@@ -95,12 +101,12 @@ NSString *TRY_AGAIN = @"Try Again";
 }
 
 - (void)enableGuessButton {
-    self.btnText.enabled = YES;
-    [self.btnText setTitleColor:[self.btnText titleColorForState:UIControlStateNormal] forState:UIControlStateNormal];
+    self.btnGuess.enabled = YES;
+    [self.btnGuess setTitleColor:[self.btnGuess titleColorForState:UIControlStateNormal] forState:UIControlStateNormal];
 }
 
 - (void)disableGuessButton {
-    self.btnText.enabled = NO;
-    [self.btnText setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    self.btnGuess.enabled = NO;
+    [self.btnGuess setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 }
 @end

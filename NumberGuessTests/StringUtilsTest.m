@@ -15,13 +15,12 @@
     STAssertEquals([StringUtils isNumericString:@"0123"], YES, nil);
     STAssertEquals([StringUtils isNumericString:@"abc"], NO, nil);
     STAssertEquals([StringUtils isNumericString:@"12ab3"], NO, nil);
-
 }
 
 - (void) testShouldBeTrueIfNoRepeatCharactersInString{
-    STAssertEquals([StringUtils isStringWithoutRepetion:@"abc"], YES, nil);
-    STAssertEquals([StringUtils isStringWithoutRepetion:@"abac"], NO, nil);
-    STAssertEquals([StringUtils isStringWithoutRepetion:@"1231"], NO, nil);
-    STAssertEquals([StringUtils isStringWithoutRepetion:@"123"], YES, nil);
+    STAssertEquals([StringUtils isStringWithoutRepetition:@"abc"], YES, nil);
+    STAssertEquals([StringUtils isStringWithoutRepetition:@"abac"], NO, nil);
+    STAssertEquals([StringUtils isStringWithoutRepetition:@"1231"], NO, nil);
+    STAssertEquals([StringUtils isStringWithoutRepetition:@"123"], YES, nil);
 }
 @end

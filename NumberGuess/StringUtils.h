@@ -9,6 +9,6 @@
 
 
 @interface StringUtils : NSObject
-+ (BOOL)isStringWithoutRepetion:(NSString *)string ;
++ (BOOL)isStringWithoutRepetition:(NSString *)string ;
 + (BOOL)isNumericString:(NSString *)inputString;
 @end
