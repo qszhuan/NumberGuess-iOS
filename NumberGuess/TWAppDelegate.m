@@ -8,15 +8,27 @@
 
 #import "TWAppDelegate.h"
 #import "TWViewController.h"
+#import "TWSettingsViewController.h"
+
 @implementation TWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.rootViewController = [[TWViewController alloc]init];
+    
+    TWViewController* guessController = [[TWViewController alloc] initWithNibName:@"TWViewController" bundle:nil];
+    TWSettingsViewController* settingsController = [[TWSettingsViewController alloc] initWithNibName:@"TWSettingsViewController" bundle:nil];
+
+    settingsController.tabBarItem.title = @"Settings";
+    guessController.tabBarItem.title = @"Guess";
+    UITabBarController* tabController = [[UITabBarController alloc]init];
+    tabController.viewControllers = @[guessController, settingsController];
+    self.window.rootViewController = tabController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+
     return YES;
 }
 

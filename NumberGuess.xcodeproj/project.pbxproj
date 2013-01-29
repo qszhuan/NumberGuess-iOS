@@ -11,6 +11,8 @@
 		6AC703A86D4E6F92CE097DF4 /* StringUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */; };
 		6AC70BB4A677EFACB0CF0212 /* TWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */; };
 		6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC704637DBECBA9D368E9AA /* TWViewController.m */; };
+		BB0FBDE116B78F66004C4770 /* TWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */; };
+		BB0FBDE616B7992A004C4770 /* TWSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC70B2259BB7ADF62A47D58 /* TWSettingsView.m */; };
 		BB1DC491169FC94D00EDA7FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC490169FC94D00EDA7FE /* UIKit.framework */; };
 		BB1DC493169FC94D00EDA7FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC492169FC94D00EDA7FE /* Foundation.framework */; };
 		BB1DC495169FC94D00EDA7FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC494169FC94D00EDA7FE /* CoreGraphics.framework */; };
@@ -45,8 +47,12 @@
 		6AC704637DBECBA9D368E9AA /* TWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWViewController.m; sourceTree = "<group>"; };
 		6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtilsTest.m; sourceTree = "<group>"; };
 		6AC7084EA541009E2223D5A6 /* StringUtilsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtilsTest.h; sourceTree = "<group>"; };
+		6AC70B2259BB7ADF62A47D58 /* TWSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSettingsView.m; sourceTree = "<group>"; };
 		6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWViewController.xib; sourceTree = "<group>"; };
+		6AC70C133DF31B2CC81FA53C /* TWSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSettingsView.h; sourceTree = "<group>"; };
 		6AC70F83C938452B70EDB953 /* TWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWViewController.h; sourceTree = "<group>"; };
+		BB0FBDDF16B78F66004C4770 /* TWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSettingsViewController.h; sourceTree = "<group>"; };
+		BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSettingsViewController.m; sourceTree = "<group>"; };
 		BB1DC48C169FC94D00EDA7FE /* NumberGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1DC490169FC94D00EDA7FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BB1DC492169FC94D00EDA7FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +112,10 @@
 				6AC70F83C938452B70EDB953 /* TWViewController.h */,
 				6AC704637DBECBA9D368E9AA /* TWViewController.m */,
 				6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */,
+				BB0FBDDF16B78F66004C4770 /* TWSettingsViewController.h */,
+				BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */,
+				6AC70B2259BB7ADF62A47D58 /* TWSettingsView.m */,
+				6AC70C133DF31B2CC81FA53C /* TWSettingsView.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,6 +307,8 @@
 				BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */,
 				6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */,
 				6AC7005A6111349A25B1BB96 /* StringUtils.m in Sources */,
+				BB0FBDE116B78F66004C4770 /* TWSettingsViewController.m in Sources */,
+				BB0FBDE616B7992A004C4770 /* TWSettingsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
