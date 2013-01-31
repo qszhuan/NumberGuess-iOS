@@ -27,8 +27,8 @@
 		BB1DC4B1169FC94D00EDA7FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1DC492169FC94D00EDA7FE /* Foundation.framework */; };
 		BB1DC4B9169FC94D00EDA7FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB1DC4B7169FC94D00EDA7FE /* InfoPlist.strings */; };
 		BB1DC4BC169FC94D00EDA7FE /* NumberGuessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4BB169FC94D00EDA7FE /* NumberGuessTests.m */; };
-		BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BB1DC4CB169FCEBA00EDA7FE /* TWNumberGuess.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1DC4CA169FCEBA00EDA7FE /* TWNumberGuess.m */; };
+		BBF7E50516A2EC3F0063E6A2 /* TWNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF7E50416A2EC3F0063E6A2 /* TWNumberGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

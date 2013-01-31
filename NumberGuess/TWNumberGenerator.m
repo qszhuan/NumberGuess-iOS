@@ -41,7 +41,7 @@ int UPPER_BOUND = 9;
 }
 
 - (NSArray*) generate{
-    NSMutableArray * seeds = [[[NSMutableArray alloc] initWithCapacity:100] autorelease];
+    NSMutableArray * seeds = [[NSMutableArray alloc] initWithCapacity:100];
 
     for (int i = 0; i < 100; i++) {
         int a = arc4random_uniform(UPPER_BOUND);
