@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SettingDelegate.h"
 
-@interface TWSettingsViewController : UIViewController <SettingDelegate>
+@interface TWSettingsViewController : UIViewController<SettingDelegate>
 
 @end

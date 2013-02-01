@@ -122,6 +122,10 @@
 		6AC7033EC4A3EC49D729F512 /* Level */ = {
 			isa = PBXGroup;
 			children = (
+				6AC7020F9790FFEAC54AEEEB /* TWLevelSettingController.h */,
+				6AC7068FD425CADA7AF9B192 /* TWLevelSettingController.m */,
+				6AC705D3F9E9CB8C4D37E3F3 /* TWLevelSettingView.h */,
+				6AC70CE21E7B2473A8F2F18E /* TWLevelSettingView.m */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -133,6 +137,16 @@
 			path = Times;
 			sourceTree = "<group>";
 		};
+		6AC70FE3388512860FE449C4 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				6AC70F83C938452B70EDB953 /* TWViewController.h */,
+				6AC704637DBECBA9D368E9AA /* TWViewController.m */,
+				6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		BB1DC481169FC94D00EDA7FE = {
 			isa = PBXGroup;
 			children = (
@@ -140,19 +154,13 @@
 				BB1DC4B4169FC94D00EDA7FE /* NumberGuessTests */,
 				BB1DC48F169FC94D00EDA7FE /* Frameworks */,
 				BB1DC48D169FC94D00EDA7FE /* Products */,
-				6AC70F83C938452B70EDB953 /* TWViewController.h */,
-				6AC704637DBECBA9D368E9AA /* TWViewController.m */,
-				6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */,
 				BB0FBDDF16B78F66004C4770 /* TWSettingsViewController.h */,
 				BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */,
 				6AC70B2259BB7ADF62A47D58 /* TWSettingsView.m */,
 				6AC70C133DF31B2CC81FA53C /* TWSettingsView.h */,
-				6AC70CE21E7B2473A8F2F18E /* TWLevelSettingView.m */,
-				6AC705D3F9E9CB8C4D37E3F3 /* TWLevelSettingView.h */,
-				6AC7020F9790FFEAC54AEEEB /* TWLevelSettingController.h */,
-				6AC7068FD425CADA7AF9B192 /* TWLevelSettingController.m */,
 				6AC704B35BFF29F09926BBF6 /* SettingDelegate.h */,
 				6AC70050504960B132D77F23 /* Settings */,
+				6AC70FE3388512860FE449C4 /* Game */,
 			);
 			sourceTree = "<group>";
 		};

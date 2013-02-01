@@ -9,7 +9,6 @@
 #import "TWAppDelegate.h"
 #import "TWViewController.h"
 #import "TWSettingsViewController.h"
-#import "TWLevelSettingController.h"
 
 @implementation TWAppDelegate
 
@@ -18,13 +17,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    TWViewController* guessController = [[TWViewController alloc] initWithNibName:@"TWViewController" bundle:nil];
-    UINavigationController * settingsNavController = [[UINavigationController alloc] initWithNibName:@"UIViewController" bundle:nil];
     TWSettingsViewController* settingsController = [[TWSettingsViewController alloc] initWithNibName:@"TWSettingsViewController" bundle:nil];
-
-    [settingsNavController pushViewController:settingsController animated:NO];
+    settingsController.title = @"Settings";
+    UINavigationController * settingsNavController = [[UINavigationController alloc] initWithNibName:@"UIViewController" bundle:nil];
+    [settingsNavController initWithRootViewController:settingsController];
     settingsNavController.tabBarItem.title = @"Settings";
+
+    TWViewController* guessController = [[TWViewController alloc] initWithNibName:@"TWViewController" bundle:nil];
     guessController.tabBarItem.title = @"Guess";
+
     UITabBarController* tabController = [[UITabBarController alloc]init];
     tabController.viewControllers = @[guessController, settingsNavController];
     self.window.rootViewController = tabController;

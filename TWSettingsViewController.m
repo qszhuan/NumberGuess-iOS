@@ -15,15 +15,6 @@
     TWLevelSettingController* levelSettingController;
 }
 
-- (void)timesButtonPressed {
-    NSLog(@"Times button pressed.");
-}
-
-- (void)levelButtonPressed {
-    NSLog(@"Level button pressed.");
-    [self.view addSubview:levelSettingController.view];
-}
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +22,7 @@
     if (self) {
         settingsView = [[TWSettingsView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         [settingsView setDelegate:self];
-        levelSettingController = [[TWLevelSettingController alloc] initWithNibName:@"TWSettingController" bundle:nil];
+        levelSettingController = [[TWLevelSettingController alloc] initWithNibName:@"TWLevelSettingController" bundle:nil];
     }
     return self;
 }
@@ -41,16 +32,15 @@
     [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+- (void)timesButtonPressed {
+    NSLog(@"Times button pressed.");
+    [[self navigationController ]pushViewController:levelSettingController animated:YES];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)levelButtonPressed {
+    NSLog(@"Level button pressed.");
+    [[self navigationController] pushViewController:levelSettingController animated:YES];
 }
 
 @end

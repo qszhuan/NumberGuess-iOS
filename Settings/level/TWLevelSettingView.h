@@ -5,8 +5,7 @@
 //
 
 
-#import <Foundation/Foundation.h>
-
 
 @interface TWLevelSettingView : UIView
+@property(nonatomic, strong) id<UIPickerViewDelegate, UIPickerViewDataSource> delegate;
 @end

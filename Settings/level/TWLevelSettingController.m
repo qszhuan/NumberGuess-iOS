@@ -15,7 +15,6 @@
 
 @implementation TWLevelSettingController{
     TWLevelSettingView *levelSettingView;
-    UIPickerView * picker;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,6 +29,8 @@
                                                         nil];
 
         self.pickerViewData = array;
+        levelSettingView = [[TWLevelSettingView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
     }
     return self;
 }
@@ -53,21 +54,9 @@
 
 
 - (void)loadView {
-    levelSettingView = [[TWLevelSettingView alloc] initWithFrame:CGRectMake(0, 0, 500, 500)];
     self.view = levelSettingView;
-    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(100, 100, 100, 50)];
-
     [self.view setBackgroundColor:[UIColor underPageBackgroundColor]];
+    [levelSettingView setDelegate:self];
 }
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [picker setBackgroundColor:[UIColor whiteColor]];
-    [picker setDelegate:self];
-    [picker setDataSource:self ];
-    [picker setShowsSelectionIndicator:YES];
-    [self.view addSubview:picker];
-}
-
 
 @end
