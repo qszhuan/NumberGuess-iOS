@@ -19,12 +19,14 @@
     // Override point for customization after application launch.
     
     TWViewController* guessController = [[TWViewController alloc] initWithNibName:@"TWViewController" bundle:nil];
+    UINavigationController * settingsNavController = [[UINavigationController alloc] initWithNibName:@"UIViewController" bundle:nil];
     TWSettingsViewController* settingsController = [[TWSettingsViewController alloc] initWithNibName:@"TWSettingsViewController" bundle:nil];
 
-    settingsController.tabBarItem.title = @"Settings";
+    [settingsNavController pushViewController:settingsController animated:NO];
+    settingsNavController.tabBarItem.title = @"Settings";
     guessController.tabBarItem.title = @"Guess";
     UITabBarController* tabController = [[UITabBarController alloc]init];
-    tabController.viewControllers = @[guessController, settingsController];
+    tabController.viewControllers = @[guessController, settingsNavController];
     self.window.rootViewController = tabController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
