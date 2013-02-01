@@ -8,23 +8,37 @@
 
 #import "TWSettingsViewController.h"
 #import "TWSettingsView.h"
+#import "TWLevelSettingController.h"
 
-@interface TWSettingsViewController ()
-@end
+@implementation TWSettingsViewController  {
+    TWSettingsView *settingsView;
+    TWLevelSettingController* levelSettingController;
+}
 
-@implementation TWSettingsViewController
+- (void)timesButtonPressed {
+    NSLog(@"Times button pressed.");
+}
+
+- (void)levelButtonPressed {
+    NSLog(@"Level button pressed.");
+    [self.view addSubview:levelSettingController.view];
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        settingsView = [[TWSettingsView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        [settingsView setDelegate:self];
+        levelSettingController = [[TWLevelSettingController alloc] initWithNibName:@"TWSettingController" bundle:nil];
     }
     return self;
 }
 
 - (void)loadView {
-    self.view = ([[TWSettingsView alloc] init]);
+    self.view = settingsView;
+    [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)viewDidLoad

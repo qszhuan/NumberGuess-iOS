@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6AC7005A6111349A25B1BB96 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7027345C5DD2C9B0DC7CB /* StringUtils.m */; };
+		6AC702A425F95F77A25B7E97 /* TWLevelSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7068FD425CADA7AF9B192 /* TWLevelSettingController.m */; };
 		6AC703A86D4E6F92CE097DF4 /* StringUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */; };
+		6AC70892ABB68FEFDC9968B2 /* TWLevelSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC70CE21E7B2473A8F2F18E /* TWLevelSettingView.m */; };
 		6AC70BB4A677EFACB0CF0212 /* TWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */; };
 		6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC704637DBECBA9D368E9AA /* TWViewController.m */; };
 		BB0FBDE116B78F66004C4770 /* TWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */; };
@@ -43,13 +45,18 @@
 
 /* Begin PBXFileReference section */
 		6AC70130BE62F38C016498D7 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		6AC7020F9790FFEAC54AEEEB /* TWLevelSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLevelSettingController.h; sourceTree = "<group>"; };
 		6AC7027345C5DD2C9B0DC7CB /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
 		6AC704637DBECBA9D368E9AA /* TWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWViewController.m; sourceTree = "<group>"; };
 		6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtilsTest.m; sourceTree = "<group>"; };
+		6AC704B35BFF29F09926BBF6 /* SettingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingDelegate.h; sourceTree = "<group>"; };
+		6AC705D3F9E9CB8C4D37E3F3 /* TWLevelSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLevelSettingView.h; sourceTree = "<group>"; };
+		6AC7068FD425CADA7AF9B192 /* TWLevelSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLevelSettingController.m; sourceTree = "<group>"; };
 		6AC7084EA541009E2223D5A6 /* StringUtilsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtilsTest.h; sourceTree = "<group>"; };
 		6AC70B2259BB7ADF62A47D58 /* TWSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSettingsView.m; sourceTree = "<group>"; };
 		6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWViewController.xib; sourceTree = "<group>"; };
 		6AC70C133DF31B2CC81FA53C /* TWSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSettingsView.h; sourceTree = "<group>"; };
+		6AC70CE21E7B2473A8F2F18E /* TWLevelSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLevelSettingView.m; sourceTree = "<group>"; };
 		6AC70F83C938452B70EDB953 /* TWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWViewController.h; sourceTree = "<group>"; };
 		BB0FBDDF16B78F66004C4770 /* TWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSettingsViewController.h; sourceTree = "<group>"; };
 		BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSettingsViewController.m; sourceTree = "<group>"; };
@@ -116,6 +123,11 @@
 				BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */,
 				6AC70B2259BB7ADF62A47D58 /* TWSettingsView.m */,
 				6AC70C133DF31B2CC81FA53C /* TWSettingsView.h */,
+				6AC70CE21E7B2473A8F2F18E /* TWLevelSettingView.m */,
+				6AC705D3F9E9CB8C4D37E3F3 /* TWLevelSettingView.h */,
+				6AC7020F9790FFEAC54AEEEB /* TWLevelSettingController.h */,
+				6AC7068FD425CADA7AF9B192 /* TWLevelSettingController.m */,
+				6AC704B35BFF29F09926BBF6 /* SettingDelegate.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -309,6 +321,8 @@
 				6AC7005A6111349A25B1BB96 /* StringUtils.m in Sources */,
 				BB0FBDE116B78F66004C4770 /* TWSettingsViewController.m in Sources */,
 				BB0FBDE616B7992A004C4770 /* TWSettingsView.m in Sources */,
+				6AC70892ABB68FEFDC9968B2 /* TWLevelSettingView.m in Sources */,
+				6AC702A425F95F77A25B7E97 /* TWLevelSettingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingDelegate.h"
 
-@interface TWSettingsViewController : UIViewController
+@interface TWSettingsViewController : UIViewController <SettingDelegate>
 
 @end
