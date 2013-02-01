@@ -23,14 +23,9 @@
     if (self) {
 
         CGRect screenRect = [[UIScreen mainScreen] bounds];
-        CGPoint centerPoint = CGPointMake(screenRect.size.width / 2, screenRect.size.height / 2);
-        int btnWith = 100;
         int btnHeight = 50;
-        CGPoint levelButtonPos = CGPointMake(centerPoint.x - btnWith / 2, centerPoint.y - btnHeight - 100);
-        CGPoint sizeButtonPos = CGPointMake(centerPoint.x - btnWith / 2, centerPoint.y + btnHeight - 100);
-
-        levelButton = [self AddButtonWithTitle:@"Level" withFrame:CGRectMake(levelButtonPos.x, levelButtonPos.y, btnWith, btnHeight)];
-        timesButton = [self AddButtonWithTitle:@"Times" withFrame:CGRectMake(sizeButtonPos.x, sizeButtonPos.y, btnWith, btnHeight)];
+        levelButton = [self AddButtonWithTitle:@"Level" withFrame:CGRectMake(0, 0, screenRect.size.width, btnHeight)];
+        timesButton = [self AddButtonWithTitle:@"Times" withFrame:CGRectMake(0, btnHeight, screenRect.size.width, btnHeight)];
         [levelButton addTarget:delegate action:@selector(levelButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         [timesButton addTarget:delegate action:@selector(timesButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     }

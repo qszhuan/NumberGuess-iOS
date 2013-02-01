@@ -7,5 +7,5 @@
 
 
 @interface TWLevelSettingView : UIView
-@property(nonatomic, strong) id<UIPickerViewDelegate, UIPickerViewDataSource> delegate;
+- (void)setPickerDelegate:delegate;
 @end

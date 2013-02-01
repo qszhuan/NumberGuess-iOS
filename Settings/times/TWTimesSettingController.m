@@ -1,34 +1,41 @@
 //
-//  TWLevelSettingController.m
+//  TWTimesSettingController.m
 //  NumberGuess
 //
-//  Created by 颛 清山 on 01/31/13.
+//  Created by 颛 清山 on 02/01/13.
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import "TWLevelSettingController.h"
-#import "TWLevelSettingView.h"
+#import "TWTimesSettingController.h"
+#import "TWTimesSettingView.h"
 
-@interface TWLevelSettingController ()
+@interface TWTimesSettingController ()
 
 @end
 
-@implementation TWLevelSettingController{
-    TWLevelSettingView *levelSettingView;
+@implementation TWTimesSettingController  {
+    TWTimesSettingView* timesSettingView;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSArray *array= [[NSArray alloc] initWithObjects:@"Easy", @"Normal", @"Hard", nil];
-
+        NSArray *array= [[NSArray alloc] initWithObjects:@"4", @"5", @"6", @"7", @"8", nil];
         self.pickerViewData = array;
-        levelSettingView = [[TWLevelSettingView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        [levelSettingView setPickerDelegate:self];
+
+        timesSettingView = [[TWTimesSettingView alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
+        [timesSettingView setPickerDelegate:self];
     }
     return self;
 }
+
+- (void)loadView {
+    self.view = timesSettingView;
+    [self.view setBackgroundColor:[UIColor underPageBackgroundColor]];
+
+}
+
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [self.pickerViewData objectAtIndex: row];
@@ -45,12 +52,6 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return [self.pickerViewData count];
-}
-
-
-- (void)loadView {
-    self.view = levelSettingView;
-    [self.view setBackgroundColor:[UIColor underPageBackgroundColor]];
 }
 
 @end

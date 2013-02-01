@@ -1,18 +1,20 @@
 //
-// Created by zhuanqingshan on 13-1-31.
+//  TWTimesSettingView.m
+//  NumberGuess
 //
-// To change the template use AppCode | Preferences | File Templates.
+//  Created by 颛 清山 on 02/01/13.
+//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
+#import "TWTimesSettingView.h"
 
-#import "TWLevelSettingView.h"
-
-
-@implementation TWLevelSettingView {
+@implementation TWTimesSettingView  {
     UIPickerView * picker;
 
 }
-- (id)initWithFrame:(CGRect)frame {
+
+- (id)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
     if (self) {
         picker = [[UIPickerView alloc] init];
@@ -29,5 +31,14 @@
     [picker setDelegate:delegate];
     [picker setDataSource:delegate];
 }
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+}
+*/
 
 @end

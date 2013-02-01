@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		6AC7005A6111349A25B1BB96 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7027345C5DD2C9B0DC7CB /* StringUtils.m */; };
 		6AC702A425F95F77A25B7E97 /* TWLevelSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7068FD425CADA7AF9B192 /* TWLevelSettingController.m */; };
+		6AC70306A56FEF234B4E85E8 /* TWTimesSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC70E9F61F1F25F2604AE6C /* TWTimesSettingView.m */; };
 		6AC703A86D4E6F92CE097DF4 /* StringUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7047D378B36BEE7F52D5B /* StringUtilsTest.m */; };
 		6AC70892ABB68FEFDC9968B2 /* TWLevelSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC70CE21E7B2473A8F2F18E /* TWLevelSettingView.m */; };
+		6AC708A317232AEC52D7691F /* TWTimesSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7001C7B1F9E3D9EA37158 /* TWTimesSettingController.m */; };
 		6AC70BB4A677EFACB0CF0212 /* TWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */; };
 		6AC70EC66C5D3CF472FF0253 /* TWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC704637DBECBA9D368E9AA /* TWViewController.m */; };
 		BB0FBDE116B78F66004C4770 /* TWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */; };
@@ -44,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6AC700033DEAEC31640006DA /* TWTimesSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTimesSettingController.h; sourceTree = "<group>"; };
+		6AC7001C7B1F9E3D9EA37158 /* TWTimesSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTimesSettingController.m; sourceTree = "<group>"; };
+		6AC70031D1D9008532ED2A79 /* TWTimesSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTimesSettingView.h; sourceTree = "<group>"; };
 		6AC70130BE62F38C016498D7 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		6AC7020F9790FFEAC54AEEEB /* TWLevelSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLevelSettingController.h; sourceTree = "<group>"; };
 		6AC7027345C5DD2C9B0DC7CB /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		6AC70B42A89BEE6ECBFE0BBC /* TWViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWViewController.xib; sourceTree = "<group>"; };
 		6AC70C133DF31B2CC81FA53C /* TWSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSettingsView.h; sourceTree = "<group>"; };
 		6AC70CE21E7B2473A8F2F18E /* TWLevelSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLevelSettingView.m; sourceTree = "<group>"; };
+		6AC70E9F61F1F25F2604AE6C /* TWTimesSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTimesSettingView.m; sourceTree = "<group>"; };
 		6AC70F83C938452B70EDB953 /* TWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWViewController.h; sourceTree = "<group>"; };
 		BB0FBDDF16B78F66004C4770 /* TWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSettingsViewController.h; sourceTree = "<group>"; };
 		BB0FBDE016B78F66004C4770 /* TWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSettingsViewController.m; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 		6AC70709C9A269F726DDB426 /* Times */ = {
 			isa = PBXGroup;
 			children = (
+				6AC700033DEAEC31640006DA /* TWTimesSettingController.h */,
+				6AC7001C7B1F9E3D9EA37158 /* TWTimesSettingController.m */,
+				6AC70031D1D9008532ED2A79 /* TWTimesSettingView.h */,
+				6AC70E9F61F1F25F2604AE6C /* TWTimesSettingView.m */,
 			);
 			path = Times;
 			sourceTree = "<group>";
@@ -356,6 +366,8 @@
 				BB0FBDE616B7992A004C4770 /* TWSettingsView.m in Sources */,
 				6AC70892ABB68FEFDC9968B2 /* TWLevelSettingView.m in Sources */,
 				6AC702A425F95F77A25B7E97 /* TWLevelSettingController.m in Sources */,
+				6AC708A317232AEC52D7691F /* TWTimesSettingController.m in Sources */,
+				6AC70306A56FEF234B4E85E8 /* TWTimesSettingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

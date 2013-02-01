@@ -9,10 +9,12 @@
 #import "TWSettingsViewController.h"
 #import "TWSettingsView.h"
 #import "TWLevelSettingController.h"
+#import "TWTimesSettingController.h"
 
 @implementation TWSettingsViewController  {
     TWSettingsView *settingsView;
     TWLevelSettingController* levelSettingController;
+    TWTimesSettingController * timesSettingController;
 }
 
 
@@ -23,6 +25,7 @@
         settingsView = [[TWSettingsView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         [settingsView setDelegate:self];
         levelSettingController = [[TWLevelSettingController alloc] initWithNibName:@"TWLevelSettingController" bundle:nil];
+        timesSettingController = [[TWTimesSettingController alloc] initWithNibName:@"TWTimesSettingController" bundle:nil];
     }
     return self;
 }
@@ -35,7 +38,7 @@
 
 - (void)timesButtonPressed {
     NSLog(@"Times button pressed.");
-    [[self navigationController ]pushViewController:levelSettingController animated:YES];
+    [[self navigationController ]pushViewController:timesSettingController animated:YES];
 }
 
 - (void)levelButtonPressed {

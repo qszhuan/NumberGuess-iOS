@@ -9,6 +9,6 @@
 
 
 @interface TWLevelSettingController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
-@property(nonatomic,retain) NSArray *pickerViewData;
+@property(nonatomic, strong) NSArray *pickerViewData;
 @end
 
